@@ -1,9 +1,12 @@
 //1. Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
-    // you code here
-
-}
+    if (num1 > num2) {
+        return num1
+    } else if (num2 > num1) {
+        return num2
+    }
+};
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
 // Example: 
@@ -14,8 +17,12 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
-}
+    if (score === 23, 25) {
+        return "A"
+    } else if (score === 4, 10) {
+        return "F"
+    }
+};
 
 
 // --------------------------------------------
@@ -29,14 +36,27 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
-    // you code below
-
-}
+    if (hour === 5 || 6 || 7 || 8 || 9 || 10 || 11) {
+        return 'Good Morning';
+    } else if (hour === 12 || 13 || 14 || 15 || 16 || 17) {
+        return 'Good Afternoon';
+    } else if (hour === 18 || 19 || 20 || 21) {
+        return 'Good Evening';
+    } else if (hour === 22 || 23 || 24 || 1 || 2 || 3 || 4) {
+        return 'Good Night';
+    }
+};
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-
-}
+    if (temp > 98.6) {
+        return "fever";
+    } else if (temp >= 103) {
+        return 'fever go to hospital';
+    } else {
+        return "no fever";
+    }
+};
 
 //5. Write a function that takes in a car object, if it is not moving then return true
 let myCar = {
@@ -47,7 +67,11 @@ let myCar = {
 }
 
 function isStopped(car) {
-
+    if (car.moving === false) {
+        return true
+    } else {
+        return false
+    }
 }
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
@@ -58,5 +82,9 @@ let dish = {
 }
 
 function washDish(dish) {
-
+    if (dish.yourDish && dish.isDirty) {
+        return true
+    } else {
+        return false
+    }
 }
