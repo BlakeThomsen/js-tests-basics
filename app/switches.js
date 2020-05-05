@@ -9,64 +9,42 @@
 function daysPosition(day, offset) {
     switch (day) {
         case "Sunday":
-            if (offset === false) {
-                return 7
+            if (daysPosition(offset === true)) {
+                return 7;
             } else {
-                return 1
+                return 1;
             };
             break;
 
         case "Monday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return 2;
             break;
 
         case "Tuesday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return 3;
             break;
 
         case "Wednesday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return 4;
             break;
 
         case "Thursday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return 5
             break;
 
         case "Friday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return 6
             break;
 
         case "Saturday":
-            if (offset === false) {
-                return 7
-            } else {
-                return 1
-            };
+            return
             break;
 
+
         default:
-            return "That\'s not a day of the week."
+            return 'That\'s not a day of the week';
             break;
+
     }
 };
 
@@ -86,9 +64,11 @@ function daysPosition(day, offset) {
  *            >= +3     |   "Ouch"
  */
 
+
+
 function golfScore(score, par) {
     switch (score) {
-        case 1 || -3:
+        case -3:
             return "Ace";
             break;
 
@@ -113,7 +93,7 @@ function golfScore(score, par) {
             break;
 
         case 3:
-            return "Ouch";
+            return "eagle";
             break;
     }
 }
